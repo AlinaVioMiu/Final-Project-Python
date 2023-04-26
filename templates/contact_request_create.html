@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+    body {
+        background-image: url("{% static 'products/icons/background_img.jpg'%}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <h2>Contact</h2>
+    <div>
+        <h6>Adresă: Bd. Iuliu Maniu, sector 6, București<br>
+            Persoană de contact: Alina Miu <br>
+            Telefon: 0740 120 210 <br></h6>
+    </div>
+    <br>
+    <br>
+    <h3>Lasă-ne un mesaj folosind formularul de mai jos și vom reveni cu un răspuns către tine.</h3>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">
+            Send
+        </button>
+    </form>
+
+{% endblock %}

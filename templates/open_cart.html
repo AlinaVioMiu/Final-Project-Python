@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+    body {
+        background-image: url("{% static 'products/icons/background_img.jpg'%}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+</style>
+{% block title %}Open Cart{% endblock %}
+
+{% block content %}
+<h2>Coș de cumpărături</h2>
+
+{% for cart_item in cart.cart_items %}
+<h5>
+    {{ cart_item.product.name }} - {{ cart_item.product.price }} lei / bucata
+    <img src="{{ cart_item.product.image }}..." class=img-thumbnail"
+         style="height: 100px; object-fit: cover;" alt="...">
+    <form action="{% url 'add_product_to_cart' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="product_id" value="{{ cart_item.product.id }}">
+        <input type="hidden" name="quantity" value="-1">
+        <button type="submit" class="btn btn-dark">
+            -
+        </button>
+    </form>
+    {{ cart_item.quantity }}
+    <form action="{% url 'add_product_to_cart' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="product_id" value="{{ cart_item.product.id }}">
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" class="btn btn-dark">
+            +
+        </button>
+    </form>
+    <form action="{% url 'add_product_to_cart' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="product_id" value="{{ cart_item.product.id }}">
+        <input type="hidden" name="quantity" value="-{{ cart_item.quantity }}">
+        <span> {{ cart_item.total }} lei</span>
+        <button type="submit" class="btn btn-danger">
+            Delete
+        </button>
+    </form>
+
+</h5>
+{% endfor %}
+<br>
+<h3>Total coș: {{ cart.total }} lei</h3>
+
+{% endblock %}
