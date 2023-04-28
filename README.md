@@ -15,17 +15,14 @@ Click dreapta in folderul nou creat, apoi se alege din meniu **Git Bash Here**:\
 
 In terminal se da comanda `git clone https://github.com/AlinaVioMiu/Final-Project-Python.git` 
 
-Se deschide PyCharm -> File-> Open… si alegem numele folderului. Apasam **OK** si **Trust Project**
+Se deschide _PyCharm_ -> File -> Open… si alegem numele folderului. Apasam **OK** si **Trust Project**
 
-Se creaza virtual environment: File->Settings...->Project->Python Interpreter -> Add Interpreter-> Add Local Interpreter -> click **OK**
+Se creaza _virtual environment_: File -> Settings...-> Project->Python Interpreter -> Add Interpreter -> Add Local Interpreter -> click **OK**
 
 ## Rulare proiect:
 In terminalul Pycharm instalam urmatoarele pachete:\
 	`pip install Django`\
 	`pip install pillow`
-
-Pentru crearea unui superuser dam urmatoarea comanda in terminal:\
-	`python manage.py createsuperuser`
 
 Pornirea serverului: in terminal, dam comanda:\
 	`python manage.py runserver`
