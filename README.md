@@ -5,7 +5,7 @@
 [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/#section=windows) IDE (Integrated Development Environment) 
 
 ### Clonare proiect:
-Se creaza un folder nou in calculator unde va fi descarcat proiectul\
+Se creaza un folder nou in calculator unde va fi descarcat proiectul
 
 Se copiaza din github link-ul: [https://github.com/AlinaVioMiu/Final-Project-Python.git]
 
@@ -15,9 +15,9 @@ Click dreapta in folderul nou creat, apoi se alege din meniu **Git Bash Here**:\
 
 In terminal se da comanda `git clone https://github.com/AlinaVioMiu/Final-Project-Python.git` 
 
-Se deschide PyCharm -> File-> Open… si alegem numele folderului. Apasam OK si Trust Project\
+Se deschide PyCharm -> File-> Open… si alegem numele folderului. Apasam **OK** si **Trust Project**
 
-Se creaza virtual environment: File->Settings...->Project->Python Interpreter -> Add Interpreter-> Add Local Interpreter -> click OK\
+Se creaza virtual environment: File->Settings...->Project->Python Interpreter -> Add Interpreter-> Add Local Interpreter -> click **OK**
 
 ## Rulare proiect:
 In terminalul Pycharm instalam urmatoarele pachete:\
