@@ -13,6 +13,7 @@ def homepage_view(request):
     # categories = Category.objects.all()
     return render(request, "homepage.html", {'products': products})
 
+
 # class ProductListView(LoginRequiredMixin, ListView):
 class ProductListView(ListView):
     model = Product
@@ -37,6 +38,7 @@ class ProductDetailView(DetailView):
     template_name = 'product_detail.html'
     context_object_name = 'product'
 
+
 @login_required
 def get_open_cart(request):
     open_cart = Cart.objects.filter(user=request.user, status='open').first()
@@ -44,10 +46,12 @@ def get_open_cart(request):
         open_cart = Cart.objects.create(user=request.user, status='open')
     return open_cart
 
+
 @login_required
 def open_cart_view(request):
     open_cart = get_open_cart(request)
     return render(request, 'open_cart.html', {'cart': open_cart})
+
 
 @login_required
 def add_product_to_cart(request):
@@ -61,7 +65,7 @@ def add_product_to_cart(request):
         else:
             cart_item.quantity += int(quantity)
             cart_item.save()
-        if cart_item.quantity < 1:
+        if int(cart_item.quantity) < 1:
             cart_item.delete()
         # return redirect(reverse_lazy('open_cart'))
         return redirect(request.META['HTTP_REFERER'])
