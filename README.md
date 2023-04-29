@@ -32,4 +32,5 @@ Pornirea serverului: in terminal, dam comanda:\
 	`python manage.py runserver`
 
 Se acceseaza: [http://127.0.0.1:8000/]
+
 ![img_5.png](img_5.png)
