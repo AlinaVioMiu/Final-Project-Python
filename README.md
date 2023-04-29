@@ -14,10 +14,14 @@ Click dreapta in folderul nou creat, apoi se alege din meniu **Git Bash Here**:\
 
 
 In terminal se da comanda `git clone https://github.com/AlinaVioMiu/Final-Project-Python.git` 
+![img.png](img.png)
 
 Se deschide _PyCharm_ -> File -> Open… si alegem numele folderului. Apasam **OK** si **Trust Project**
+![img_2.png](img_2.png)
 
 Se creaza _virtual environment_: File -> Settings...-> Project->Python Interpreter -> Add Interpreter -> Add Local Interpreter -> click **OK**
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
 
 ## Rulare proiect:
 In terminalul Pycharm instalam urmatoarele pachete:\
@@ -28,4 +32,4 @@ Pornirea serverului: in terminal, dam comanda:\
 	`python manage.py runserver`
 
 Se acceseaza: [http://127.0.0.1:8000/]
-
+![img_5.png](img_5.png)
