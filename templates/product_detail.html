@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ product.price }} lei / bucata</h5>
                     <p class="card-text">{{ product.description }}</p>
-                    <p class="card-text">Stoc: {{ product.stock }} bucati</p>
+                    <p class="card-text">Stoc: {{ product.stock }} bucăți</p>
                     <form action="{% url 'add_product_to_cart' %}" method="post">
                         {% csrf_token %}
                         <input type="number" value="1" min="1" max="{{ product.stock }}" name="quantity">
